@@ -12,6 +12,6 @@ A(:,1);                     %Retrun all elements in column 1 of matrix A
 A([1 3],:);                 %Return all elements of 1st and 3rd row
 A=[A,[11;12;13]];           %Append another column to matrix A
 A=[A;[7 8 9]];              %Append another row to matrix A
-A(2,3)=16;					%Modify element of position (2,3)
-A(:,3)=[51;52;53;54]		%Modify all elements of 3rd column
-A(:)						%Put all the elements of A in a single column vector
+A(2,3)=16;					        %Modify element of position (2,3)
+A(:,3)=[51;52;53;54]		    %Modify all elements of 3rd column
+A(:)						            %Put all the elements of A in a single column vector
