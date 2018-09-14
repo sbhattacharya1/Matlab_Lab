@@ -4,9 +4,25 @@ plot(t,y1);                                             %Plot, x axis ->t and y 
 y2=cos(2*pi*4*t);
 plot(t,y2);
 
-plot(t,y1,'r');                                         %Plot, x axis ->t and y axis ->y1 and colour red
+plot(t,y1,'r');                                         %Plot, x axis ->t and y axis ->y1 and colour red,by default it will connect all the points and form a line
 hold on;                                                %To plot new figure on top of the old one
+grid on;                                                %display grids in the figure
 plot(t,y2,'b');                                         %Plot, x axis ->t and y axis ->y2 and colour blue
+hold off;                                               %hold off to overwrite the figure with next plot
+
+%Some properties of plot function
+x=linspace(2,30,15);
+y=linspace(15,225,15);
+plot(x,y,'-rx');                                        %plot (x,y) and mark all the points 'x',color red,linestyle '-'
+plot(x,y,'rx');                                         %plot (x,y) and mark all the points 'x',color red, but no line is formed
+plot(x,y,'rx','Markersize',10);                         %plot (x,y) and mark all the points 'x',color red, size of each marker is 10
+plot(x,y,'rx','LineWidth',2);                           %plot (x,y) and mark all the points 'x',color red, width of each marker will increase means it will be bold
+p=plot(x,y);                                            %Storing the result of plot function in a variable p
+p.Marker='o';                                           %each point will be marked as 'o', it can also be 'x','*' etc
+p.LineStyle='none';                                     %there will be no line formed from the plotting, style can also be '-','--',':' etc
+p.LineWidth=2;                                          %Same like line 18, width will be increased
+
+%Some other functionalities
 xlabel('Time');                                         %To label the x-axis as 'Time'
 ylabel('Value');                                        %To label the y-axis as 'Value'
 legend('sin','cos');                                    %A descriptive label to describe plotted data, in this case red is 'sin' and blue is 'cos'
@@ -23,4 +39,17 @@ clf;                                                    %Clear the figure drawn 
 close;                                                  %Close the last figure
 
 close all;                                              %Close all figures
+
+
+%Some basics of 3-D plotting
+t = 0:pi/50:10*pi;
+st = sin(t);
+ct = cos(t);
+
+figure
+plot3(st,ct,t)                                          %function for 3-D plotting
+
+
+
+
 
