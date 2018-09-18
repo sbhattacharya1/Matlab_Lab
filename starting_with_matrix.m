@@ -39,3 +39,5 @@ max(A,[],2)                 %this command will return the max element from each 
 
 magic(3)                    %A 3X3 magic square matrix 
 flipud(A)                   %function returns A with its rows flipped in the up-down direction
+
+numel(A)                    %Total number of elements in matrix A
