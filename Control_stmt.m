@@ -28,3 +28,8 @@ while i<11
         break;              %Break statement to break while loop
     end;
 end;
+
+vec=[1 7 9 5 99];
+for i = vec                 %Assignment of vector elements in loop 
+    disp(i+50);
+end;
